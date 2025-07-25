@@ -6,6 +6,11 @@ using gRPC_Learning;
 using System.Diagnostics;
 using System.Linq;
 
+// This File is Created to show diffrent features of gRPC Service and how to formate them
+// gRPC is a high-performance RPC framework that uses HTTP/2 for transport and Protocol Buffers as the interface description language.
+// It is designed for low latency and high throughput, making it suitable for microservices and distributed systems.
+// gRPC supports multiple programming languages and provides features like streaming, authentication, and error handling.
+
 namespace gRPC_Learning.Services;
 
 // Diese Klasse implementiert den gRPC-Service und erbt von der automatisch generierten Greeter.GreeterBase
