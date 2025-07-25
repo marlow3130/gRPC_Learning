@@ -18,7 +18,7 @@ public class GreeterService : Greeter.GreeterBase
             Message = "Hello " + request.Name
         });
     }
-    public override Task<HelloReply> SayGoodbye(HelloRequest request, ServerCallContext context)
+    public Task<HelloReply> SayGoodbye(HelloRequest request, ServerCallContext context)
     {
         return Task.FromResult(new HelloReply
         {
