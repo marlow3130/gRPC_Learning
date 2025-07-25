@@ -1,0 +1,7 @@
+/Users/luca/Documents/c#/gRPC_Learning/gRPC_Learning/obj/Debug/net9.0/gRPC_Learning.csproj.AssemblyReference.cache
+/Users/luca/Documents/c#/gRPC_Learning/gRPC_Learning/obj/Debug/net9.0/rpswa.dswa.cache.json
+/Users/luca/Documents/c#/gRPC_Learning/gRPC_Learning/obj/Debug/net9.0/gRPC_Learning.GeneratedMSBuildEditorConfig.editorconfig
+/Users/luca/Documents/c#/gRPC_Learning/gRPC_Learning/obj/Debug/net9.0/gRPC_Learning.AssemblyInfoInputs.cache
+/Users/luca/Documents/c#/gRPC_Learning/gRPC_Learning/obj/Debug/net9.0/gRPC_Learning.AssemblyInfo.cs
+/Users/luca/Documents/c#/gRPC_Learning/gRPC_Learning/obj/Debug/net9.0/gRPC_Learning.csproj.CoreCompileInputs.cache
+/Users/luca/Documents/c#/gRPC_Learning/gRPC_Learning/obj/Debug/net9.0/gRPC_Learning.MvcApplicationPartsAssemblyInfo.cache
