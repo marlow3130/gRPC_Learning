@@ -20,3 +20,7 @@ message HelloReply {
   string message = 1;
 }
 
+// The response message contains goodbye
+message GoodbyeReply. {
+  string message = 2;
+}
