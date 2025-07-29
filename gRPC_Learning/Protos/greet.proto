@@ -4,23 +4,83 @@ option csharp_namespace = "gRPC_Learning";
 
 package greet;
 
-// The greeting service definition.
+// The greeting service definition with comprehensive greeting capabilities
 service Greeter {
-  // Sends a greeting
+  // Sends a personalized greeting with enhanced features
   rpc SayHello (HelloRequest) returns (HelloReply);
+  
+  // Sends a goodbye message
+  rpc SayGoodbye (GoodbyeRequest) returns (GoodbyeReply);
+  
+  // Gets server health and performance information
+  rpc GetServerInfo (ServerInfoRequest) returns (ServerInfoReply);
+  
+  // Validates user input without processing
+  rpc ValidateUser (UserValidationRequest) returns (UserValidationReply);
+  
+  // Streaming RPC for multiple greetings
+  rpc SayHelloStream (stream HelloRequest) returns (stream HelloReply);
 }
 
-// The request message containing the user's name.
+// The request message containing the user's name with optional parameters
 message HelloRequest {
+  string name = 1;
+  optional string greeting_type = 2; // e.g., "Hello", "Hi", "Greetings"
+  optional bool include_time = 3;    // Whether to include time-based greeting
+  optional string user_type = 4;     // e.g., "admin", "test", "regular"
+}
+
+// The response message containing the personalized greetings
+message HelloReply {
+  string message = 1;
+  int64 processing_time_ms = 2;
+  string server_timestamp = 3;
+  string time_of_day_greeting = 4;
+  bool is_admin_user = 5;
+}
+
+// The goodbye request message
+message GoodbyeRequest {
+  string name = 1;
+  optional string farewell_type = 2; // e.g., "Goodbye", "See you", "Farewell"
+}
+
+// The goodbye response message
+message GoodbyeReply {
+  string message = 1;
+  string server_timestamp = 2;
+}
+
+// Server information request (empty for now)
+message ServerInfoRequest {
+  // Empty request - no parameters needed
+}
+
+// Server information response
+message ServerInfoReply {
+  string server_name = 1;
+  string version = 2;
+  string uptime = 3;
+  int32 total_requests_served = 4;
+  double average_response_time_ms = 5;
+}
+
+// User validation request
+message UserValidationRequest {
   string name = 1;
 }
 
-// The response message containing the greetings.
-message HelloReply {
-  string message = 1;
+// User validation response
+message UserValidationReply {
+  bool is_valid = 1;
+  repeated string validation_errors = 2;
+  UserType user_type = 3;
 }
 
-// The response message contains goodbye
-message GoodbyeReply. {
-  string message = 2;
+// Enum for user types
+enum UserType {
+  USER_TYPE_UNSPECIFIED = 0;
+  USER_TYPE_REGULAR = 1;
+  USER_TYPE_ADMIN = 2;
+  USER_TYPE_TEST = 3;
 }
